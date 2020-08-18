@@ -15,15 +15,22 @@ def linear_search(arr, target):
 def binary_search(arr, target):
 
     # Your code here
-    hi = len(arr)
+    hi = len(arr) -1
     lo = 0
 
-    mid = (hi + lo) // 2
+    while lo <= hi:
 
-    if arr[mid] < target:
+        mid = (lo + hi) // 2 # finds the middle point
 
-    elif arr[mid] > target:
-        
+        if arr[mid] == target:
+            return mid
+        elif target < arr[mid]:
+            hi = mid - 1
+        else:
+            lo = mid + 1
+
+
+
 
 
 
